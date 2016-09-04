@@ -1,1 +1,586 @@
-This is my website
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="uft-8">
+        <title> Karen Kong </title>
+        <!--Raleway Font-->
+        <link href="https://fonts.googleapis.com/css?family=Raleway:light,regular,regularitalic,medium,semibold,bold,extra-bold,black" rel="stylesheet" type="text/css">
+        <!--ParaType Mono Font-->
+        <link href="https://fonts.googleapis.com/css?family=PT+Mono" rel="stylesheet"> 
+        <!--Material Design Icons-->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <style type="text/css" media="all">
+            body {
+                font-family: 'Raleway', sans-serif;
+                font-size: 14px;
+            }
+            h1, h2 {
+                font-family: 'PT Mono', monospace;
+                text-align: center;
+            }
+            h3 {
+                text-align: center;
+            }
+            /*Navigation Bar*/
+            nav {
+                text-align: center;
+                left: 39%;
+                top: 0px;
+                position:fixed;
+                z-index:10;
+                background-color: rgba(0,0,0,0.1);
+                border-color: rgba(0,0,0,0.2);
+                border-style: none solid solid solid;
+                border-width: 5px;
+                border-radius: 0px 0px 10px 10px;
+            }
+            .material-icons {
+                font-size: 36px;
+                color: rgb(0,149,182);
+                padding: 10px;
+            }
+            .material-icons:hover {
+                transition: background 0.3s, color 0.3s;
+                transition-property: background, color;
+                transition-duration: 0.3s, 0.3s;
+                transition-timing-function: ease, ease;
+                transition-delay: 0s, 0s;
+                background-color: rgba(0,0,0, 0.9);
+            }
+            /*Hero Main Landing*/
+            main {
+                width: 100%;
+                overflow: hidden;
+            }
+            .hero {
+                top: 60px;
+                width: 100%;
+                height: 375px;
+                text-align: center;
+                margin: 0 auto;
+                background: rgba(0,0,0, 0.5);
+                position: relative;
+            }
+            .hero h1 {
+                font-size: 72px;
+                margin: auto;
+                position: absolute;
+                top: 50px;
+                left: 25%;
+                right: 25%; 
+                bottom: 210px;
+                z-index: 5;
+                background-color: rgba(255,255,255,0.25);
+            }
+            .hero p {
+                font-size: 24px;
+                margin: auto;
+                position: absolute;
+                top: 130px;
+                left: 0;
+                right: 0; 
+                bottom: 0;
+                z-index: 5; 
+            }
+            .hero img{
+                height: 100%;
+            }
+            .hero .bar {
+                width: 50%;
+                height: 50px;
+                opacity: 0.3;
+                position: absolute;
+                z-index: 5;
+                left: 0;
+                top: 0px;
+            }
+            /*Animations for Description Keywords*/
+            #keywords {
+                color: rgb(0,149,182);
+                font-weight: bold;
+            }
+            #keywords span:nth-of-type(1) {
+                -webkit-animation: one 3s infinite; /* Chrome, Safari, Opera */
+                animation: one 3s infinite;
+            }
+            #keywords span:nth-of-type(2) {
+                -webkit-animation: two 3s infinite; /* Chrome, Safari, Opera */
+                animation: two 3s infinite;
+            }
+            #keywords span:nth-of-type(3) {
+                -webkit-animation: three 3s infinite; /* Chrome, Safari, Opera */
+                animation: three 3s infinite;
+            }
+            #keywords span:nth-of-type(4) {
+                -webkit-animation: four 3s infinite; /* Chrome, Safari, Opera */
+                animation: four 3s infinite;
+            }
+            @-webkit-keyframes one { /* Chrome, Safari, Opera */ 
+                0% {
+                    opacity: 0;
+                }
+            }
+            @keyframes one {
+                0% {
+                    opacity: 0;
+                }
+            }
+            @-webkit-keyframes two { /* Chrome, Safari, Opera */ 
+                20% {
+                    opacity: 0;
+                }
+            }
+            @keyframes two {
+                20% {
+                    opacity: 0;
+                }
+            }
+            @-webkit-keyframes three { /* Chrome, Safari, Opera */ 
+                40% {
+                    opacity: 0;
+                }
+            }
+            @keyframes three{
+                40% {
+                    opacity: 0;
+                }
+            }
+            @-webkit-keyframes four { /* Chrome, Safari, Opera */ 
+                60% {
+                    opacity: 0;
+                }
+            }
+            @keyframes four{
+                60% {
+                    opacity: 0;
+                }
+            }
+            /*Information Sections*/
+            #contact img{
+                float: left;
+                width: 50px;
+                height: 50px;
+                margin: 10px;
+                -webkit-transition: transform 0.2s ease; /* Chrome, Safari, Opera */
+                transition: transform 0.2s ease;
+            }
+            #contact img:hover {
+                transform: translate(0, -5px);
+            }
+            #about img {
+                float: left;
+                border-style: solid;
+                border-color: rgb(255,255,255);
+                border-width: 0px 15px 15px 30px;
+            }
+            #about p {
+                background-color: rgb(255,236,139);
+            }
+            #skills {
+                clear: left;
+                margin-left: auto;
+                margin-right: auto;
+                text-align: center;
+                border: 10px double rgb(0,0,0);
+                width:400px;
+            }
+            #skills table {
+                margin-left: auto;
+                margin-right: auto;
+            }
+            #skills th {
+                text-decoration: underline;
+            }
+            #experience {
+                border-style: groove none ridge none;
+                border-width: 10px;
+                border-color: rgb(125,249,255);
+            }
+            #blank_bar {
+                background-color: white;
+                width: 100%;
+                height: 10px;
+            }
+            #projects {
+                background-color: black;
+                color: white;
+            }
+            #project_grid {
+                display: flex;
+                flex-flow: row wrap;
+                justify-content: center;
+                align-items: flex-end;
+            }
+            #project_grid a {
+                background-color: white;
+                display: inline-block;
+                margin: 5px 5px 5px 5px;
+                width: 25%;
+                height: 400px;
+                text-decoration: none;
+                color: black;
+                text-align: center;
+                border: 3px solid rgb(0,0,0);
+                padding: 10px;
+                -webkit-transition: transform .0.2s eas-in-out; /* Chrome, Safari, Opera */
+                transition: transform 0.2s ease;
+                overflow: auto;
+            }
+            #project_grid a:hover {
+                transform: scale(1.05);
+            }
+            #project_grid img {
+                margin-left: auto;
+                margin-right: auto;
+                max-width: 100%;
+                height: 300px;
+                display: block;
+            }
+            figure {
+                margin: 0;
+                overflow: hidden;
+            }
+            figcaption {
+                margin-top: 15px;
+            }
+            #research {
+                border-style: outset none inset none;
+                border-width: 10px;
+                border-color: rgb(8,146,208);
+            }
+            #education {
+                text-align: center;
+            }
+            #education a {
+                color: black;
+                text-decoration: none;
+            }
+            #education ul {
+                list-style-type: none;
+            }
+            #education #cs_courses {
+                text-decoration: underline;
+            }
+            #activities {
+                display: flex;
+                flex-flow: row wrap;
+                justify-content: center;
+                align-items: flex-end;
+            }
+            #activities div {
+                display: inline-block;
+                width: 30%;
+                height: 300px;
+                border: 5px solid black;
+                border-width: 5px;
+                border-color: black white black white;
+                border-style: solid;
+                padding: 10px;
+                overflow: auto;
+            }
+            #activities #leadership {
+                background-color: rgba(8,146,208, 0.8);
+            }
+            #activities #extracurriculars {
+                background-color: rgba(55,55,55,0.5);
+            }
+            #activities #awards {
+                background-color: rgba(255,236,139,1);
+            }
+            footer {
+                float: none;
+                text-align: center;
+                background-color: rgba(0,0,0,0.2);
+                margin-left: auto;
+                margin-right: auto;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- Navigation Bar -->
+        <nav>
+            <a href="#about"><i class="material-icons">face</i></a>
+            <a href="#skills"><i class="material-icons">build</i></a>
+            <a href="#experience"><i class="material-icons" >work</i></a>
+            <a href="#projects"><i class="material-icons">code</i></a>
+            <a href="#research"><i class="material-icons">search</i></a>
+            <a href="#education"><i class="material-icons">school</i></a>
+        </nav>
+        <!--Hero Main Landing-->
+        <main>
+            <div class="hero">
+                <h1>Karen Kong</h1>
+                <p id="keywords">
+                    <span>Software Engineer</span> |
+                    <span>Researcher</span> |
+                    <span>Scholar</span> |
+                    <span>Highlander</span>
+                </p>
+                <div class="bar"></div>
+                <img src="images/san_diego_beach.jpg"/>
+        </main>
+        <!--About Me-->
+        <div id="about">
+            <img src="images/kong_karen.jpg" height="300" alt="Portrait of Karen Kong">  
+            <p>
+                <br>               
+                Welcome! My name is Karen Kong and I'm an undergraduate <strong>Computer Science</strong> student at the <strong>University of California, Riverside</strong>. 
+                <br> <br>
+                My high school's AP Computer Science class ignited my passion for <strong>solving challenges</strong> and <strong>expressing creativity</strong> through programming. From then on, my aspirations included earning a degree in computer science and working in the industry. 
+                <br> <br>
+                To me, there's no greater satisfaction than <strong>designing, developing, and debugging</strong> a piece of code that is then placed into action in a larger project. In my spare time, you'll find me crafting
+                <strong>planar graph algorithms</strong> and implementing <strong>system updates</strong> in the research lab and exploring <strong>Android application</strong> and <strong>game development</strong>.
+                <br><br>
+            </p>
+        </div>
+        <!--Contact Info Icon Tray-->
+        <div id="contact">
+            <a href="files/kong_karen_resume.pdf" target="_blank"><img src="images/resume.png" height="50" alt="Resume"></a>
+            <a href="https://github.com/kkong006" target="_blank"><img src="images/github.png" height="50" alt="Resume"></a>
+            <a href="https://www.linkedin.com/in/kkong006" target="_blank"><img src="images/linkedin.png" height="50" alt="Resume"></a>
+            <a href="mailto:kong.karen@outlook.com?Subject=Recruiting" target="_blank"><img src="images/email.png" height="50" alt="Resume"></a>
+        </div>
+        <!--Skills Summary-->
+        <div id="skills">
+            <h1>Technical Skills</h1>
+                <h2>Languages</h2>
+                <table>
+                    <tr>
+                        <th>Language</th>
+                        <th>Skill Level</th>
+                    </tr>
+                    <tr>
+                        <td>C++</td>
+                        <td>Proficient</td>
+                    </tr>
+                    <tr>
+                        <td>Java</td>
+                        <td>Proficient</td>
+                    </tr>
+                    <tr>
+                        <td>Python</td>
+                        <td>Familiar</td>
+                    </tr>
+                    <tr>
+                        <td>C#</td>
+                        <td>Familiar</td>
+                    </tr>
+                    <tr>
+                        <td>HTML/CSS</td>
+                        <td>Familiar</td>
+                    </tr>
+                    <tr>
+                        <td>Visual Basic</td>
+                        <td>Familiar</td>
+                    </tr>
+                </table>
+                <h2>Software</h2>
+                    <ul>
+                        <li>Visual Studio</li>
+                        <li>Android Studio</li>
+                        <li>Unity Game Engine</li>
+                        <li>VIM</li>
+                        <li>Git & Github</li>
+                        <li>Windows, Linux, Android</li>
+                    </ul>
+        </div>
+        <br>
+        <!--Work Experience-->
+        <div id="experience">
+            <h1>Work Experience</h1>
+                <h2>Embedded Systems Lab Research Internship - NSF REU (June 2016 - September 2016)</h2>
+                    <h3>Algorithms for the Design Automation of Microfluidic Laboratories-on-a-Chip (LoCs), supervised by <a href="http://www1.cs.ucr.edu/faculty/philip/" target="_blank">Dr. Philip Brisk</a> and <a href="https://www.linkedin.com/in/brrcrites" target="_blank">Brian Crites</a>:</h3>
+                        <ul>
+                            <li>Directed placer graph placement algorithm that increased area utilization by an average of 35%.</li>
+                            <li>Seam carving post-processing algorithm that increased area utilization by an average of 33% and decrease average route length by an average of 15%.</li>
+                            <li>Routing algorithm optimizations, including pre-routing port assignment, route turn reduction, and enforced buffer to prevent route segments from touching other route segments and components.</li>
+                            <li>Revision and design of test cases for benchmarks.</li>
+                            <li>Assisted in writing and revising a paper on research performed submitted to the Asia and South Pacific Design Automation Conference.</li>
+                        </ul>       
+        </div>
+        <!--Projects-->
+        <div id="projects">
+            <div id="blank_bar"> </div>
+            <h1>Projects</h1>
+                <!--Flexbox Grid-->
+                <container id= "project_grid">
+                    <a href="https://github.com/kkong006/Walk-in-Their-Shoes" target="_blank">
+                        <figure>
+                            <img src="images/wits_screenshot.png" alt="WITS Screenshot">
+                            <figcaption>
+                                <strong>Walk in Their Shoes</strong><br>
+                                Java | Android Studio <br>
+                                Grand Prize Winner at the 2016 San Diego Women's Hackathon <br>
+                                A response to the worldwide refugee crisis.
+                            </figcaption>
+                        </figure>
+                    </a>
+                    <a href="https://github.com/kkong006/rshell" target="_blank">
+                        <figure>
+                            <img src="images/rshell_screenshot.png" alt="Rshell Terminal Shell">
+                            <figcaption>
+                                <strong>Rshell</strong><br>
+                                C++ | VIM <br>
+                                A Linux terminal shell that uses system calls to execute commands.
+                            </figcaption>
+                        </figure>
+                    </a>
+                    <a href="https://github.com/kkong006/Aurora" target="_blank">
+                        <figure>
+                            <img src="images/aurora_screenshot.png" alt="Aurora Screenshot">
+                            <figcaption>
+                                <strong>Aurora</strong><br>
+                                Java | Android <br>
+                                Virtual Reality based real estate listing and viewing platform.
+                            </figcaption>
+                        </figure>
+                    </a>
+                    <a href="https://github.com/kkong006/Routing_Framework" target="_blank">
+                        <figure>
+                            <img src="images/grid_routing_screenshot.png" alt="Circles Screenshot">
+                            <figcaption>
+                                <strong>Grid Routing Framework</strong><br>
+                                C++ | Linux<br>
+                                Implemented Lee's Routing Algorithm, a breadth first search, on a 2D grid with turn reduction and multiple route optimizations.
+                            </figcaption>
+                        </figure>
+                    </a>
+                    <a href="https://github.com/kkong006/Circles-Android-Application" target="_blank">
+                        <figure>
+                            <img src="images/circles_screenshot.png" alt="Circles Screenshot">
+                            <figcaption>
+                                <strong>Circles</strong><br>
+                                Java | Android Studio<br>
+                                Study group and meeting organization application for classes.
+                            </figcaption>
+                        </figure>
+                    </a>
+                    <a href="https://github.com/kkong006/Aquatic-Codeliners-Game" target="_blank">
+                        <figure>
+                            <img src="images/aquatic_codeliners_screenshot.png" alt="Aquatic Codeliners Screenshot">
+                            <figcaption>
+                                <strong>Aquatic Codeliners Game</strong><br>
+                                Visual Basic | Visual Studio <br>
+                                Promotes water conservation efforts in the state of California through an interactive game and water usage calculator.
+                            </figcaption>
+                        </figure>
+                    </a>
+                    <a href="https://github.com/kkong006/Modern-Art-Android-Application" target="_blank">
+                        <figure>
+                            <img src="images/modern_art_screenshot.png" alt="Modern Art Screenshot">
+                            <figcaption>
+                                <strong>Modern Art</strong><br>
+                                Java | Android Studio <br>
+                                Inspired by the works of modern artists. Users adjust the color of the blocks and launch the MOMA website from the information menu.
+                            </figcaption>
+                        </figure>
+                    </a>
+                    <a href="https://github.com/kkong006/kkong006.github.io" target="_blank">
+                        <figure>
+                            <img src="images/personal_website_screenshot.png" alt="Personal Website Screenshot">
+                            <figcaption>
+                                <strong>Personal Website</strong><br>
+                                HTML/CSS <br>
+                                Learned HTML and CSS to create this website.
+                            </figcaption>
+                        </figure>
+                    </a>
+                    <a href="https://github.com/kkong006/Mazes-Inc-Game" target="_blank">
+                        <figure>
+                            <img src="images/mazes_screenshot.png" alt="Mazes Inc Screenshot">
+                            <figcaption>
+                                <strong>Mazes Inc. Game</strong><br>
+                                Visual Basic | Visual Studio <br>
+                                A maze game in which the user drives a mine cart and fires explosives to removes obstacles.
+                            </figcaption>
+                        </figure>
+                    </a>
+                </container>
+        </div>
+        <!--Research-->
+        <div id="blank_bar"></div>
+        <div id="research">
+            <h1>Research</h1>
+                <h2>Embedded Systems Lab</h2>
+                    <h3>Graph Placement Algorithms for the Microfluidic Continuous Flow Framework, supervised by <a href="http://www1.cs.ucr.edu/faculty/philip/" target="_blank">Dr. Philip Brisk</a> and <a href="https://www.linkedin.com/in/brrcrites" target="_blank">Brian Crites</a>:</h3>
+                    <ul>
+                        <li>Series of 4 iterative expansion algorithms that expand initial point placement from the Chrobak-Payne Straight Line Routing Alforithm to account for areas of components at the points.</li>
+                        <li>Increased area utilization up to 23%</li>
+                        <li>Diagonal cur post-processor that replaces corners on routes with diagonal segments.</li>
+                    </ul>
+        </div>
+        <!--Education-->
+        <div id="education">
+            <h1>Education</h1>
+                <h2><a href="http://www.ucr.edu/" target="_blank">University of California, Riverside</a> (September 2015 - present)</h2>
+                    <h3>Graduating in June 2018</h3>
+                    <h3>Cumulative GPA: 3.98 | CS Major GPA: 4.00</h3>
+                    <h3><span id="cs_courses">Computer Science Coursework</span></h3>
+                    <ul>
+                        <li><strong>C++ Object Oriented Programming </strong>(CS12)</li>
+                        <li><strong>Data Structures and Algorithms </strong>(CS14)</li>
+                        <li><strong>Software Construction </strong>(CS100)</li>
+                        <li><strong>Discrete Structures </strong>(CS11)</li>
+                        <li><strong>Advanced Discrete Structures </strong>(CS111)</li>
+                        <li><strong>Machine Assembly Language and Computer Organization </strong>(CS 61)</li>
+                    </ul>
+                <h2><a href="http://www.rusdlink.org/king" target="_blank">Martin Luther King Jr. High School</a> (August 2014 - June 2015)</h2>
+                    <h3>Weighted GPA: 4.36 | Unweighted GPA: 4.00</h3>
+                    <h3><span id="cs_courses">Computer Science Coursework</span></h3>
+                    <ul>
+                        <li><strong>2D Game Development Using Visual Studio in Visual Basic</strong></li>
+                    </ul>
+                
+                <h2><a href="http://tvmsc.boiseschools.org/" target="_blank">Treasure Valley Mathematics and Science Center (August 2010 - June 2014)</a></h2>
+                    <h3><span id="cs_courses">Computer Science Coursework</span></h3>
+                    <ul>
+                        <li><strong>Java Object Oriented Programming</strong> (AP Computer Science)</li>
+                    </ul>
+        </div>
+        <div id="blank_bar"></div>
+        <!--Extracurricular Activities-->
+        <container id="activities">
+            <!--Leadership Positions-->
+            <div id="leadership">
+                <h1>Leadership Positions</h1>
+                    <ul>
+                        <li><strong>University of California, Riverside Delegate</strong> to the University of California Student Congress</li>
+                        <li><strong>Bourns College of Engineering Day Organizer</strong></li>
+                        <li><strong>President of Computer Club</strong> (2014-2015)</li>
+                        <li><strong>Women in Computer Science Workshops Organizer</strong> (2014-2015)</li>
+                    </ul>
+            </div>
+            <!--Extracurricular Activities-->
+            <div id="extracurriculars">
+                <h1>Extracurricular Activities</h1>
+                    <ul>
+                        <li><strong>Bourns College of Engineering Day Planning Committee</strong></li>
+                        <li><strong>Brain Game Center Research Assistant</strong></li>
+                        <li><strong>Embedded Systems Lab Researcher</strong></li>
+                        <li><strong>Association for Computing Machinery</strong> (ACM)</li>
+                        <li><strong>Society of Women Engineers</strong> (SWE)</li>
+                    </ul>
+            </div>
+            <!--Scholarships and Awards-->
+            <div id="awards">
+                <h1>Scholarships and Honors</h1>
+                    <ul>
+                        <li><strong>Entertainment Software Association Computer and Video Game Scholarship</strong>(2016)</li>
+                        <li><strong>University of California, Riverside Brithinee Alumni Association Scholarship</strong>(2016)</li>
+                        <li><strong>Society of Women Engineers Admiral Grace Murray Hopper Scholarship</strong>(2015)</li>
+                        <li><strong>Southern California NCWIT (National Center for Women and Informational Technology) Award for Aspirations in Computing</strong>(2015)</li>
+                        <li><strong>University of California, Riverside Regents Scholar</strong> (2015-)</li>
+                    </ul>
+            </div>
+        </container>
+        <div id="blank_bar"></div>
+        <!--Footer-->
+        <footer id="footer">
+            Contact Me!
+            <a href="mailto:kong.karen@outlook.com?Subject=Recruiting" target="_blank">kong.karen@outlook.com</a>
+            <a href="https://github.com/kkong006" target="_blank">Github</a>
+            <a href="https://www.linkedin.com/in/kkong006" target="_blank">Linkedin</a>
+            <a href="files/kong_karen_resume.pdf" target="_blank">Resume</a>
+        </footer>
+    </body>
+</html>
