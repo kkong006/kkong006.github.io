@@ -29,15 +29,16 @@
             /*Navigation Bar*/
             nav {
                 text-align: center;
-                left: 39%;
+                left: 0%;
                 top: 0px;
+                width: 100%;
                 position:fixed;
                 z-index:10;
-                background-color: rgba(0,0,0,0.1);
-                border-color: rgba(0,0,0,0.2);
-                border-style: none solid solid solid;
-                border-width: 5px;
-                border-radius: 0px 0px 10px 10px;
+                background-color: rgba(255,255,255,0.9);
+                /*border-color: rgba(0,0,0,0.2);*/
+                /*border-style: none solid solid solid;*/
+                /*border-width: 5px;*/
+                /*border-radius: 0px 0px 10px 10px;*/
             }
             .material-icons {
                 font-size: 36px;
@@ -60,7 +61,6 @@
             .hero {
                 top: 60px;
                 width: 100%;
-                height: 375px;
                 text-align: center;
                 margin: 0 auto;
                 background: rgba(0,0,0, 0.5);
@@ -70,10 +70,10 @@
                 font-size: 72px;
                 margin: auto;
                 position: absolute;
-                top: 50px;
+                top: 200px;
                 left: 25%;
                 right: 25%; 
-                bottom: 210px;
+                bottom: 400px;
                 z-index: 5;
                 background-color: rgba(255,255,255,0.25);
             }
@@ -81,14 +81,14 @@
                 font-size: 24px;
                 margin: auto;
                 position: absolute;
-                top: 130px;
+                top: 300px;
                 left: 0;
                 right: 0; 
                 bottom: 0;
                 z-index: 5; 
             }
             .hero img{
-                height: 100%;
+                width: 100%;
             }
             .hero .bar {
                 width: 50%;
@@ -155,13 +155,16 @@
                     opacity: 0;
                 }
             }
-            @keyframes four{
+            @keyframes four {
                 60% {
                     opacity: 0;
                 }
             }
             /*Information Sections*/
-            #contact img{
+            #contact {
+                
+            }
+            #contact img {
                 float: left;
                 width: 50px;
                 height: 50px;
@@ -179,7 +182,7 @@
                 border-width: 0px 15px 15px 30px;
             }
             #about p {
-                background-color: rgb(255,236,139);
+                /*background-color: rgb(255,236,139);*/
             }
             #skills {
                 clear: left;
@@ -202,9 +205,12 @@
                 margin: 0;
             }
             #experience {
-                border-style: groove none ridge none;
+                /*border-style: groove none ridge none;
                 border-width: 10px;
-                border-color: rgb(125,249,255);
+                border-color: rgb(125,249,255);*/
+                padding: 10px;
+                background-color: #7D1935;
+                color: white;
             }
             #blank_bar {
                 background-color: white;
@@ -212,8 +218,8 @@
                 height: 10px;
             }
             #projects {
-                background-color: black;
-                color: white;
+                background-color: #F5F3EE;
+                padding: 10px;
             }
             #project_grid {
                 display: flex;
@@ -226,7 +232,7 @@
                 display: inline-block;
                 margin: 5px 5px 5px 5px;
                 width: 25%;
-                height: 400px;
+                height: 300px;
                 text-decoration: none;
                 color: black;
                 text-align: center;
@@ -243,7 +249,7 @@
                 margin-left: auto;
                 margin-right: auto;
                 max-width: 100%;
-                height: 300px;
+                height: 200px;
                 display: block;
             }
             figure {
@@ -253,11 +259,13 @@
             figcaption {
                 margin-top: 15px;
             }
-            #research {
+            /*#research {
                 border-style: outset none inset none;
                 border-width: 10px;
                 border-color: rgb(8,146,208);
-            }
+                padding: 10px;
+                background-color: #F5F3EE;
+            }*/
             #education {
                 text-align: center;
             }
@@ -299,11 +307,17 @@
             }
             footer {
                 float: none;
+                width: 100%;
+                height: 200px;
                 text-align: center;
                 background-color: rgba(0,0,0,0.2);
                 margin-left: auto;
                 margin-right: auto;
             }
+            /*footer img {
+                width: 100%;
+                height: 100%; 
+            }*/
         </style>
     </head>
     <body>
@@ -313,7 +327,7 @@
             <a href="#contact" title="Skills"><i class="material-icons">build</i></a>
             <a href="#work" title="Experience"><i class="material-icons" >work</i></a>
             <a href="#code" title="Projects"><i class="material-icons">code</i></a>
-            <a href="#search" title="Research"><i class="material-icons">search</i></a>
+            <!--<a href="#search" title="Research"><i class="material-icons">search</i></a>-->
             <a href="#scholar" title="Education"><i class="material-icons">school</i></a>
         </nav>
         <!--Hero Main Landing-->
@@ -327,7 +341,7 @@
                     <span>Highlander</span>
                 </p>
                 <div class="bar"></div>
-                <img src="images/san_diego_beach.JPG"/>
+                <img src="images/san_diego_beach.JPG" alt="Beach Scene"/>
         </main>
         <!--About Me-->
         <div id="about">
@@ -380,6 +394,10 @@
                         <td>Familiar</td>
                     </tr>
                     <tr>
+                        <td>JavaScript</td>
+                        <td>Familiar</td>
+                    </tr>
+                    <tr>
                         <td>Visual Basic</td>
                         <td>Familiar</td>
                     </tr>
@@ -398,17 +416,32 @@
         <br>
         <!--Work Experience-->
         <div id="experience">
-            <h1>Work Experience</h1>
-                <h2>Embedded Systems Lab Research Internship - NSF REU (June 2016 - September 2016)</h2>
+            <h1>Experience</h1>
+                <h2>Research Internship - NSF REU (June 2016 - September 2016)</h2>
                     <h3>Algorithms for the Design Automation of Microfluidic Laboratories-on-a-Chip (LoCs), supervised by <a href="http://www1.cs.ucr.edu/faculty/philip/" target="_blank">Dr. Philip Brisk</a> and <a href="https://www.linkedin.com/in/brrcrites" target="_blank">Brian Crites</a>:</h3>
                         <ul>
                             <li>Directed placer graph placement algorithm that increased area utilization by an average of 35%.</li>
                             <li>Seam carving post-processing algorithm that increased area utilization by an average of 33% and decrease average route length by an average of 15%.</li>
-                            <div id="code"></div>
+                            <div id="search"></div>
                             <li>Routing algorithm optimizations, including pre-routing port assignment, route turn reduction, and enforced buffer to prevent route segments from touching other route segments and components.</li>
                             <li>Revision and design of test cases for benchmarks.</li>
                             <li>Assisted in writing and revising a paper on research performed submitted to the Asia and South Pacific Design Automation Conference.</li>
-                        </ul>       
+                        </ul>
+        <!--Research
+        <div id="blank_bar"></div>
+        <div id="research">
+            <h1>Research</h1>
+        </div>-->
+                <h2>Embedded Systems Lab Undergraduate Researcher</h2>
+                    <h3>Graph Placement Algorithms for the Microfluidic Continuous Flow Framework, supervised by <a href="http://www1.cs.ucr.edu/faculty/philip/" target="_blank">Dr. Philip Brisk</a> and <a href="https://www.linkedin.com/in/brrcrites" target="_blank">Brian Crites</a>:</h3>
+                    <ul>
+                        <li>Series of 4 iterative expansion algorithms that expand initial point placement from the Chrobak-Payne Straight Line Routing Alforithm to account for areas of components at the points.</li>
+                        <li>Increased area utilization by up to 23%</li>
+                        <li>Diagonal cut post-processor that replaces corners on routes with diagonal segments.</li>
+                    </ul>
+                    <div id="code"></div>
+                <h2>Brain Game Center Game Developer</h2>
+                    <h3>Implement features for brain memory and cognition training games in C# using Unity Game Engine with Visual Studio</h3>   
         </div>
         <!--Projects-->
         <div id="projects">
@@ -427,13 +460,13 @@
                             </figcaption>
                         </figure>
                     </a>
-                    <a href="https://github.com/kkong006/rshell" target="_blank">
+                    <a href="https://github.com/kkong006/Routing_Framework" target="_blank">
                         <figure>
-                            <img src="images/rshell_screenshot.png" alt="Rshell Terminal Shell">
+                            <img src="images/grid_routing_screenshot.png" alt="Circles Screenshot">
                             <figcaption>
-                                <strong>Rshell</strong><br>
-                                C++ | VIM <br>
-                                A Linux terminal shell that uses system calls to execute commands.
+                                <strong>Grid Routing Framework</strong><br>
+                                C++ | Linux<br>
+                                Implemented Lee's Routing Algorithm, a breadth first search, on a 2D grid with turn reduction and multiple route optimizations.
                             </figcaption>
                         </figure>
                     </a>
@@ -447,13 +480,13 @@
                             </figcaption>
                         </figure>
                     </a>
-                    <a href="https://github.com/kkong006/Routing_Framework" target="_blank">
+                    <a href="https://github.com/kkong006/rshell" target="_blank">
                         <figure>
-                            <img src="images/grid_routing_screenshot.png" alt="Circles Screenshot">
+                            <img src="images/rshell_screenshot.png" alt="Rshell Terminal Shell">
                             <figcaption>
-                                <strong>Grid Routing Framework</strong><br>
-                                C++ | Linux<br>
-                                Implemented Lee's Routing Algorithm, a breadth first search, on a 2D grid with turn reduction and multiple route optimizations.
+                                <strong>Rshell</strong><br>
+                                C++ | VIM <br>
+                                A Linux terminal shell that uses system calls to execute commands.
                             </figcaption>
                         </figure>
                     </a>
@@ -503,25 +536,12 @@
                             <figcaption>
                                 <strong>Mazes Inc. Game</strong><br>
                                 Visual Basic | Visual Studio <br>
-                                <div id="search"></div>
+                                <div id="scholar"></div>
                                 A maze game in which the user drives a mine cart and fires explosives to removes obstacles.
                             </figcaption>
                         </figure>
                     </a>
                 </container>
-        </div>
-        <!--Research-->
-        <div id="blank_bar"></div>
-        <div id="research">
-            <h1>Research</h1>
-                <h2>Embedded Systems Lab</h2>
-                    <h3>Graph Placement Algorithms for the Microfluidic Continuous Flow Framework, supervised by <a href="http://www1.cs.ucr.edu/faculty/philip/" target="_blank">Dr. Philip Brisk</a> and <a href="https://www.linkedin.com/in/brrcrites" target="_blank">Brian Crites</a>:</h3>
-                    <ul>
-                        <li>Series of 4 iterative expansion algorithms that expand initial point placement from the Chrobak-Payne Straight Line Routing Alforithm to account for areas of components at the points.</li>
-                        <div id="scholar"></div>
-                        <li>Increased area utilization by up to 23%</li>
-                        <li>Diagonal cut post-processor that replaces corners on routes with diagonal segments.</li>
-                    </ul>
         </div>
         <!--Education-->
         <div id="education">
@@ -529,7 +549,7 @@
                 <h2><a href="http://www.ucr.edu/" target="_blank">University of California, Riverside</a> (September 2015 - present)</h2>
                     <h3>Graduating in June 2018</h3>
                     <h3>Cumulative GPA: 3.98 | CS Major GPA: 4.00</h3>
-                    <h3><span id="cs_courses">Computer Science Coursework</span></h3>
+                    <!--<h3><span id="cs_courses">Computer Science Coursework</span></h3>-->
                     <ul>
                         <li><strong>C++ Object Oriented Programming </strong>(CS12)</li>
                         <li><strong>Data Structures and Algorithms </strong>(CS14)</li>
@@ -540,13 +560,13 @@
                     </ul>
                 <h2><a href="http://www.rusdlink.org/king" target="_blank">Martin Luther King Jr. High School</a> (August 2014 - June 2015)</h2>
                     <h3>Weighted GPA: 4.36 | Unweighted GPA: 4.00</h3>
-                    <h3><span id="cs_courses">Computer Science Coursework</span></h3>
+                    <!--<h3><span id="cs_courses">Computer Science Coursework</span></h3>-->
                     <ul>
                         <li><strong>2D Game Development Using Visual Studio in Visual Basic</strong></li>
                     </ul>
                 
                 <h2><a href="http://tvmsc.boiseschools.org/" target="_blank">Treasure Valley Mathematics and Science Center (August 2010 - June 2014)</a></h2>
-                    <h3><span id="cs_courses">Computer Science Coursework</span></h3>
+                    <!--<h3><span id="cs_courses">Computer Science Coursework</span></h3>-->
                     <ul>
                         <li><strong>Java Object Oriented Programming</strong> (AP Computer Science)</li>
                     </ul>
@@ -590,11 +610,12 @@
         <div id="blank_bar"></div>
         <!--Footer-->
         <footer id="footer">
-            Contact Me!
-            <a href="mailto:kong.karen@outlook.com?Subject=Recruiting" target="_blank">kong.karen@outlook.com</a>
-            <a href="https://github.com/kkong006" target="_blank">Github</a>
-            <a href="https://www.linkedin.com/in/kkong006" target="_blank">Linkedin</a>
+            <p>Contact Me!</p>
+            <a href="mailto:kong.karen@outlook.com?Subject=Recruiting" target="_blank">kong.karen@outlook.com</a> <br><br>
+            <a href="https://github.com/kkong006" target="_blank">Github</a> <br><br>
+            <a href="https://www.linkedin.com/in/kkong006" target="_blank">Linkedin</a> <br><br>
             <a href="files/kong_karen_resume.pdf" target="_blank">Resume</a>
+            <!--<img src="images/san_diego_zoo.JPG" alt="Foliage Scene"/>-->
         </footer>
     </body>
 </html>
