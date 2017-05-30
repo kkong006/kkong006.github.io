@@ -8,317 +8,16 @@
         <meta property="og:description" content="Software Engineer | Researcher | Student"/>
         <meta property="og:image" content="https://raw.githubusercontent.com/kkong006/kkong006.github.io/master/images/kong_karen.JPG"/>
         <meta charset="uft-8">
+        <link href="style.css" type="text/css" rel="stylesheet">
         <!--Raleway Font-->
         <link href="https://fonts.googleapis.com/css?family=Raleway:light,regular,regularitalic,medium,semibold,bold,extra-bold,black" rel="stylesheet" type="text/css">
         <!--ParaType Mono Font-->
         <link href="https://fonts.googleapis.com/css?family=PT+Mono" rel="stylesheet"> 
         <!--Material Design Icons-->
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-        <style type="text/css" media="all">
-            body {
-                font-family: 'Raleway', sans-serif;
-                font-size: 14px;
-            }
-            h1, h2 {
-                font-family: 'PT Mono', monospace;
-                text-align: center;
-            }
-            h3 {
-                text-align: center;
-            }
-            /*Navigation Bar*/
-            nav {
-                text-align: center;
-                left: 0%;
-                top: 0px;
-                width: 100%;
-                position:fixed;
-                z-index:10;
-                background-color: rgba(255,255,255,0.9);
-                /*border-color: rgba(0,0,0,0.2);*/
-                /*border-style: none solid solid solid;*/
-                /*border-width: 5px;*/
-                /*border-radius: 0px 0px 10px 10px;*/
-            }
-            .material-icons {
-                font-size: 36px;
-                color: rgb(0,149,182);
-                padding: 10px;
-            }
-            .material-icons:hover {
-                transition: background 0.3s, color 0.3s;
-                transition-property: background, color;
-                transition-duration: 0.3s, 0.3s;
-                transition-timing-function: ease, ease;
-                transition-delay: 0s, 0s;
-                background-color: rgba(0,0,0, 0.9);
-            }
-            /*Hero Main Landing*/
-            main {
-                width: 100%;
-                overflow: hidden;
-            }
-            .hero {
-                top: 60px;
-                width: 100%;
-                text-align: center;
-                margin: 0 auto;
-                background: rgba(0,0,0, 0.5);
-                position: relative;
-            }
-            .hero h1 {
-                font-size: 72px;
-                margin: auto;
-                position: absolute;
-                top: 200px;
-                left: 25%;
-                right: 25%; 
-                bottom: 400px;
-                z-index: 5;
-                background-color: rgba(255,255,255,0.25);
-            }
-            .hero p {
-                font-size: 24px;
-                margin: auto;
-                position: absolute;
-                top: 300px;
-                left: 0;
-                right: 0; 
-                bottom: 0;
-                z-index: 5; 
-            }
-            .hero img{
-                width: 100%;
-            }
-            .hero .bar {
-                width: 50%;
-                height: 50px;
-                opacity: 0.3;
-                position: absolute;
-                z-index: 5;
-                left: 0;
-                top: 0px;
-            }
-            /*Animations for Description Keywords*/
-            #keywords {
-                color: rgb(0,149,182);
-                font-weight: bold;
-            }
-            #keywords span:nth-of-type(1) {
-                -webkit-animation: one 3s infinite; /* Chrome, Safari, Opera */
-                animation: one 3s infinite;
-            }
-            #keywords span:nth-of-type(2) {
-                -webkit-animation: two 3s infinite; /* Chrome, Safari, Opera */
-                animation: two 3s infinite;
-            }
-            #keywords span:nth-of-type(3) {
-                -webkit-animation: three 3s infinite; /* Chrome, Safari, Opera */
-                animation: three 3s infinite;
-            }
-            #keywords span:nth-of-type(4) {
-                -webkit-animation: four 3s infinite; /* Chrome, Safari, Opera */
-                animation: four 3s infinite;
-            }
-            @-webkit-keyframes one { /* Chrome, Safari, Opera */ 
-                0% {
-                    opacity: 0;
-                }
-            }
-            @keyframes one {
-                0% {
-                    opacity: 0;
-                }
-            }
-            @-webkit-keyframes two { /* Chrome, Safari, Opera */ 
-                20% {
-                    opacity: 0;
-                }
-            }
-            @keyframes two {
-                20% {
-                    opacity: 0;
-                }
-            }
-            @-webkit-keyframes three { /* Chrome, Safari, Opera */ 
-                40% {
-                    opacity: 0;
-                }
-            }
-            @keyframes three{
-                40% {
-                    opacity: 0;
-                }
-            }
-            @-webkit-keyframes four { /* Chrome, Safari, Opera */ 
-                60% {
-                    opacity: 0;
-                }
-            }
-            @keyframes four {
-                60% {
-                    opacity: 0;
-                }
-            }
-            /*Information Sections*/
-            #contact {
-                
-            }
-            #contact img {
-                float: left;
-                width: 50px;
-                height: 50px;
-                margin: 10px;
-                -webkit-transition: transform 0.2s ease; /* Chrome, Safari, Opera */
-                transition: transform 0.2s ease;
-            }
-            #contact img:hover {
-                transform: translate(0, -5px);
-            }
-            #about img {
-                float: left;
-                border-style: solid;
-                border-color: rgb(255,255,255);
-                border-width: 0px 15px 15px 30px;
-            }
-            #about p {
-                /*background-color: rgb(255,236,139);*/
-            }
-            #skills {
-                clear: left;
-                margin-left: auto;
-                margin-right: auto;
-                text-align: center;
-                border: 10px double rgb(0,0,0);
-                width:400px;
-            }
-            #skills table {
-                margin-left: auto;
-                margin-right: auto;
-            }
-            #skills th {
-                text-decoration: underline;
-            }
-            #skills ul {
-                list-style-type: none;
-                padding: 0 0 20px 0;
-                margin: 0;
-            }
-            #experience {
-                /*border-style: groove none ridge none;
-                border-width: 10px;
-                border-color: rgb(125,249,255);*/
-                padding: 10px;
-		background-color: rgb(0,149,182);
-                color: white;
-            }
-            #blank_bar {
-                background-color: white;
-                width: 100%;
-                height: 10px;
-            }
-            #projects {
-                background-color: #F5F3EE;
-                padding: 10px;
-            }
-            #project_grid {
-                display: flex;
-                flex-flow: row wrap;
-                justify-content: center;
-                align-items: flex-end;
-            }
-            #project_grid a {
-                background-color: white;
-                display: inline-block;
-                margin: 5px 5px 5px 5px;
-                width: 25%;
-                height: 300px;
-                text-decoration: none;
-                color: black;
-                text-align: center;
-                border: 3px solid rgb(0,0,0);
-                padding: 10px;
-                -webkit-transition: transform .0.2s eas-in-out; /* Chrome, Safari, Opera */
-                transition: transform 0.2s ease;
-                overflow: auto;
-            }
-            #project_grid a:hover {
-                transform: scale(1.05);
-            }
-            #project_grid img {
-                margin-left: auto;
-                margin-right: auto;
-                max-width: 100%;
-                height: 200px;
-                display: block;
-            }
-            figure {
-                margin: 0;
-                overflow: hidden;
-            }
-            figcaption {
-                margin-top: 15px;
-            }
-            /*#research {
-                border-style: outset none inset none;
-                border-width: 10px;
-                border-color: rgb(8,146,208);
-                padding: 10px;
-                background-color: #F5F3EE;
-            }*/
-            #education {
-                text-align: center;
-            }
-            #education a {
-                color: black;
-                text-decoration: none;
-            }
-            #education ul {
-                list-style-type: none;
-            }
-            #education #cs_courses {
-                text-decoration: underline;
-            }
-            #activities {
-                display: flex;
-                flex-flow: row wrap;
-                justify-content: center;
-                align-items: flex-end;
-            }
-            #activities div {
-                display: inline-block;
-                width: 30%;
-                height: 300px;
-                border: 5px solid black;
-                border-width: 5px;
-                border-color: black white black white;
-                border-style: solid;
-                padding: 10px;
-                overflow: auto;
-            }
-            #activities #leadership {
-                background-color: rgba(8,146,208, 0.8);
-            }
-            #activities #extracurriculars {
-                background-color: rgba(55,55,55,0.5);
-            }
-            #activities #awards {
-                background-color: rgba(255,236,139,1);
-            }
-            footer {
-                float: none;
-                width: 100%;
-                height: 200px;
-                text-align: center;
-                background-color: rgba(0,0,0,0.2);
-                margin-left: auto;
-                margin-right: auto;
-            }
-            /*footer img {
-                width: 100%;
-                height: 100%; 
-            }*/
-        </style>
+        <!--<style type="text/css" media="all">
+            
+        </style>-->
     </head>
     <body>
         <!-- Navigation Bar -->
@@ -332,16 +31,16 @@
         </nav>
         <!--Hero Main Landing-->
         <main>
-            <div class="hero" id="hero">
-                <h1>Karen Kong</h1>
-                <p id="keywords">
-                    <span>Software Engineer</span> |
-                    <span>Researcher</span> |
-                    <span>Scholar</span> |
-                    <span>Highlander</span>
-                </p>
-                <div class="bar"></div>
-                <img src="images/san_diego_beach.JPG" alt="Beach Scene"/>
+            <div class="hero">
+                <div id="hero">
+                    <h1>Karen Kong</h1>
+                    <p id="keywords">
+                        <span>Software Engineer</span> |
+                        <span>Researcher</span> |
+                        <span>Highlander</span>
+                    </p>
+                </div>
+            </div>            
         </main>
         <!--About Me-->
         <div id="about">
@@ -397,10 +96,10 @@
                         <td>JavaScript</td>
                         <td>Familiar</td>
                     </tr>
-                    <tr>
+                    <!--<tr>
                         <td>Visual Basic</td>
                         <td>Familiar</td>
-                    </tr>
+                    </tr>-->
                 </table>
                 <h2>Software</h2>
                     <ul>
@@ -417,11 +116,28 @@
         <!--Work Experience-->
         <div id="experience">
             <h1>Experience</h1>
-                <h2>Research Internship - NSF REU (June 2016 - September 2016)</h2>
+                <h2>Software Engineering Intern - Facebook (Summer 2017)</h2>
+                    <h3>Android Application Development in Facebook University for Engineers program.</h3>
+                <h2>Intern - zyBooks (December 2016 - Present)</h2>
+                    <h3>Computer Science course material reviewer and editor for online educational content provider</h3>
+                    <ul>
+                        <li>Review Computer Science course materials before online publication.</li>
+                        <li>Alternative text translations in XML of interactive learning activities for the blind.</li>
+                        <li>Provide technical support services for instructors and students.</li>
+
+                    </ul>
+                <h2>Research Assistant - Embedded Systems Lab (January 2016 - Present)</h2>
+                    <h3>Graph Placement Algorithms for the Microfluidic Continuous Flow Framework, supervised by <a href="http://www1.cs.ucr.edu/faculty/philip/" target="_blank">Dr. Philip Brisk</a> and <a href="https://www.linkedin.com/in/brrcrites" target="_blank">Brian Crites</a>:</h3>
+                    <ul>
+                        <li>Series of 4 iterative expansion algorithms that expand initial point placement from the Chrobak-Payne Straight Line Routing Alforithm to account for areas of components at the points.</li>
+                        <li>Increased area utilization by up to 23%</li>
+                        <li>Diagonal cut post-processor that replaces corners on routes with diagonal segments.</li>
+                    </ul>
+                <h2>Research Intern - NSF REU (June 2016 - September 2016)</h2>
                     <h3>Algorithms for the Design Automation of Microfluidic Laboratories-on-a-Chip (LoCs), supervised by <a href="http://www1.cs.ucr.edu/faculty/philip/" target="_blank">Dr. Philip Brisk</a> and <a href="https://www.linkedin.com/in/brrcrites" target="_blank">Brian Crites</a>:</h3>
                         <ul>
-                            <li>Directed placer graph placement algorithm that increased area utilization by an average of 35%.</li>
-                            <li>Seam carving post-processing algorithm that increased area utilization by an average of 33% and decrease average route length by an average of 15%.</li>
+                            <li>Directed placer graph placement algorithm that increased average area utilization by 24% and decreased average route length by 94%.</li>
+                            <li>Seam carving post-processing algorithm that increased average area utilization by 33% and decrease average route length by 15%.</li>
                             <div id="search"></div>
                             <li>Routing algorithm optimizations, including pre-routing port assignment, route turn reduction, and enforced buffer to prevent route segments from touching other route segments and components.</li>
                             <li>Revision and design of test cases for benchmarks.</li>
@@ -432,23 +148,9 @@
         <div id="research">
             <h1>Research</h1>
         </div>-->
-                <h2>Technology Internship - zyBooks</h2>
-                    <h3>Computer Science (and STEM) course material XML reviewer and editor for online course provider</h3>
-                    <ul>
-                        <li>Review STEM, mainly Computer Science, course materials before online publication.</li>
-                        <li>Alternative text translations of interactive learning activities for the blind.</li>
-                        <li>Provide technical support services for instructors and students.</li>
 
-                    </ul>
-                <h2>Research Assistant - Embedded Systems Lab</h2>
-                    <h3>Graph Placement Algorithms for the Microfluidic Continuous Flow Framework, supervised by <a href="http://www1.cs.ucr.edu/faculty/philip/" target="_blank">Dr. Philip Brisk</a> and <a href="https://www.linkedin.com/in/brrcrites" target="_blank">Brian Crites</a>:</h3>
-                    <ul>
-                        <li>Series of 4 iterative expansion algorithms that expand initial point placement from the Chrobak-Payne Straight Line Routing Alforithm to account for areas of components at the points.</li>
-                        <li>Increased area utilization by up to 23%</li>
-                        <li>Diagonal cut post-processor that replaces corners on routes with diagonal segments.</li>
-                    </ul>
                     <div id="code"></div>
-                <h2>Game Developer - Brain Game Center</h2>
+                <h2>Game Developer - Brain Game Center (September 2016 - October 2016)</h2>
                     <h3>Implement features for brain memory and cognition training games in C# using Unity Game Engine with Visual Studio</h3> 
                     <ul>
                         <li>Created task set selection menu and end of level statistics display for auditory training game.</li>
@@ -558,7 +260,7 @@
         <div id="education">
             <h1>Education</h1>
                 <h2><a href="http://www.ucr.edu/" target="_blank">University of California, Riverside</a> (September 2015 - present)</h2>
-                    <h3>Graduating in June 2018</h3>
+                    <h3>Computer Science B.S. + M.S. (Graduating June 2019)</h3>
                     <h3>Cumulative GPA: 3.98 | CS Major GPA: 4.00</h3>
                     <!--<h3><span id="cs_courses">Computer Science Coursework</span></h3>-->
                     <ul>
@@ -594,32 +296,29 @@
             <div id="leadership">
                 <h1>Leadership Positions</h1>
                     <ul>
-                        <li><strong>University of California, Riverside Delegate</strong> to the University of California Student Congress</li>
-                        <li><strong>Bourns College of Engineering Day Organizer</strong></li>
-                        <li><strong>President of Computer Club</strong> (2014-2015)</li>
-                        <li><strong>Women in Computer Science Workshops Organizer</strong> (2014-2015)</li>
+                        <li><strong>University of California, Riverside Delegate - University of California Student Congress </strong>(2016)</li>
+                        <li><strong>Organizer - Bourns College of Engineering Day </strong>(2016)</li>
+                        <li><strong>President - Computer Club </strong>(2014-2015)</li>
+                        <li><strong>Organizer - Women in Computer Science Workshops </strong>(2014-2015)</li>
                     </ul>
             </div>
             <!--Extracurricular Activities-->
             <div id="extracurriculars">
                 <h1>Extracurricular Activities</h1>
                     <ul>
-                        <li><strong>Bourns College of Engineering Day Planning Committee</strong></li>
-                        <li><strong>Brain Game Center Research Assistant</strong></li>
-                        <li><strong>Embedded Systems Lab Researcher</strong></li>
-                        <li><strong>Association for Computing Machinery</strong> (ACM)</li>
-                        <li><strong>Society of Women Engineers</strong> (SWE)</li>
+                        <li><strong>Member - Association for Computing Machinery</strong> (ACM)</li>
+                        <li><strong>Member - Society of Women Engineers</strong> (SWE)</li>
                     </ul>
             </div>
             <!--Scholarships and Awards-->
             <div id="awards">
                 <h1>Scholarships and Honors</h1>
                     <ul>
-                        <li><strong>Entertainment Software Association Computer and Video Game Scholarship</strong>(2016)</li>
-                        <li><strong>University of California, Riverside Brithinee Alumni Association Scholarship</strong>(2016)</li>
-                        <li><strong>Society of Women Engineers Admiral Grace Murray Hopper Scholarship</strong>(2015)</li>
-                        <li><strong>Southern California NCWIT (National Center for Women and Informational Technology) Award for Aspirations in Computing</strong>(2015)</li>
-                        <li><strong>University of California, Riverside Regents Scholar</strong> (2015-)</li>
+                        <li><strong>Regents Scholarship - University of California, Riverside </strong>(2015-2019)</li>
+                        <li><strong>Computer and Video Game Scholarship - Entertainment Software Association </strong>(2016)</li>
+                        <li><strong>Brithinee Alumni Association Scholarship - University of California, Riverside </strong>(2016)</li>
+                        <li><strong>Admiral Grace Murray Hopper Scholarship - Society of Women Engineers </strong>(2015)</li>
+                        <li><strong>Award for Aspirations in Computing - Southern California NCWIT (National Center for Women and Informational Technology) </strong>(2015)</li>   
                     </ul>
             </div>
         </container>
