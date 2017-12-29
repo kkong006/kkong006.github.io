@@ -185,8 +185,11 @@ main {
     border-width: 10px;
     border-color: rgb(125,249,255);*/
     padding: 10px;
-background-color: rgb(0,149,182);
+    background-color: rgb(0,149,182);
     color: white;
+}
+#experience ul {
+    margin-left: 200px;
 }
 #blank_bar {
     background-color: white;
